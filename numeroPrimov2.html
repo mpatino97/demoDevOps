@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Numero Primo</title>
+    </head>
+    <body>
+        <h1>Verificación de Números Primos</h1>
+        <p>Este script verifica si un número ingresado por el usuario es primo.</p>
+        <input id="numero" placeholder="Ingrese un número positivo" />
+        <button id="verificar">Verificar</button>
+        <p id = "resultado"></p>
+
+        <script>
+            function esPrimo(num) {
+                if (num <= 1) {
+                    return `${num} NO es primo`;
+                }
+                let contador = 0;
+                for (let i = 1; i <= num; i++) {
+                    if (num % i === 0) {
+                        contador++;
+                    }
+                }
+                return contador === 2 ? `${num} es primo` : `${num} NO es primo`;
+            }
+
+            document.getElementById("verificar").addEventListener("click", function() { 
+                let n1 = parseInt(document.getElementById("numero").value);
+                let resultado = esPrimo(n1); 
+                document.getElementById("resultado").innerText = resultado;
+            }); 
+
+        </script>
+    </body>
+</html>
