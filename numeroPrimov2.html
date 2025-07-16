@@ -14,7 +14,7 @@
         <script>
             function esPrimo(num) {
                 if (num <= 1) {
-                    return `${num} NO es primo`;
+                    return `Resultado: ${num} NO es primo`;
                 }
                 let contador = 0;
                 for (let i = 1; i <= num; i++) {
@@ -22,7 +22,7 @@
                         contador++;
                     }
                 }
-                return contador === 2 ? `${num} es primo` : `${num} NO es primo`;
+                return contador === 2 ? `Resultado: ${num} es primo` : `Resultado: ${num} NO es primo`;
             }
 
             document.getElementById("verificar").addEventListener("click", function() { 
