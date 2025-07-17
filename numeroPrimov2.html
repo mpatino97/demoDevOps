@@ -26,9 +26,10 @@
             }
 
             document.getElementById("verificar").addEventListener("click", function() { 
-                let n1 = parseInt(document.getElementById("numero").value);
-                let resultado = esPrimo(n1); 
+                const n1 = parseInt(document.getElementById("numero").value);
+                const resultado = esPrimo(n1); 
                 document.getElementById("resultado").innerText = resultado;
+                console.log(`Se verificó el número ${n1}: ${resultado}`);
             }); 
 
         </script>
