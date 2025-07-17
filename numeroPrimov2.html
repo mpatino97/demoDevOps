@@ -26,8 +26,12 @@
             }
 
             document.getElementById("verificar").addEventListener("click", function() { 
-                let n1 = parseInt(document.getElementById("numero").value);
-                let resultado = esPrimo(n1); 
+                const num = document.getElementById("numero").value;
+                if (!num) {
+                    document.getElementById("resultado").innerText = "Por favor ingrese un número";
+                    return;
+                }
+                const resultado = esPrimo(parseInt(num)); 
                 document.getElementById("resultado").innerText = resultado;
             }); 
 
