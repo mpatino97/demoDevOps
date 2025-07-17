@@ -26,11 +26,16 @@
             }
 
             document.getElementById("verificar").addEventListener("click", function() { 
-                const n1 = parseInt(document.getElementById("numero").value);
+                const num = document.getElementById("numero").value;
+                if (!num) {
+                    document.getElementById("resultado").innerText = "Por favor ingrese un número";
+                    return;
+                }
+                const n1 = parseInt(num);
                 const resultado = esPrimo(n1); 
                 document.getElementById("resultado").innerText = resultado;
                 console.log(`Se verificó el número ${n1}: ${resultado}`);
-            }); 
+            });
 
         </script>
     </body>
